@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#define LoginViewControllerID @"LunchViewController"
+#define MainViewControllerID @"MainViewController"
 
-@interface AppDelegate ()
+@interface AppDelegate (){
+    BOOL _isLogin;
+}
 
 @end
 
@@ -16,7 +20,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //先拿到storyBoard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    //判断是否登录，来对应不同的操作视图
+//    _isLogin = YES;
+        NSString *loadViewControllerName = _isLogin? MainViewControllerID : LoginViewControllerID;
+    id viewController = [storyboard instantiateViewControllerWithIdentifier:loadViewControllerName];
+    self.window.rootViewController = viewController;
+    
     return YES;
 }
 
