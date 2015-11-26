@@ -115,12 +115,12 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:@"lat"]) {
-        [_postParameterDic setObject:[change objectForKey:@"new"] forKey:@"lat"];
-        [[NSUserDefaults standardUserDefaults]setValue:[change objectForKey:@"new"] forKey:@"lat"];
+        [_postParameterDic setObject:@"22.284681" forKey:@"lat"];
+        [[NSUserDefaults standardUserDefaults]setValue:@"22.284681" forKey:@"lat"];
     }
     if ([keyPath isEqualToString:@"lon"]) {
-        [_postParameterDic setObject:[change objectForKey:@"new"] forKey:@"lon"];
-        [[NSUserDefaults standardUserDefaults]setValue:[change objectForKey:@"new"] forKey:@"lon"];
+        [_postParameterDic setObject:@"114.158177" forKey:@"lon"];
+        [[NSUserDefaults standardUserDefaults]setValue:@"114.158177" forKey:@"lon"];
     }
     
 }
