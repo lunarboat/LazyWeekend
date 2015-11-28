@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:taiyuan.gpx">
+   </FileRef>
+   <FileRef
       location = "group:LazyWeekend.xcodeproj">
    </FileRef>
    <FileRef

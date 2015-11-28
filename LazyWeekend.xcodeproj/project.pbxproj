@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5D80691C09E19900CCFAD9 /* taiyuan.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3E5D80681C09E19800CCFAD9 /* taiyuan.gpx */; };
 		3E7F48201BEF36AC00668B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F481F1BEF36AC00668B5E /* main.m */; };
 		3E7F48231BEF36AC00668B5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F48221BEF36AC00668B5E /* AppDelegate.m */; };
 		3E7F48291BEF36AC00668B5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F48271BEF36AC00668B5E /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		31E4112A26FA379D1E1806ED /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E5D80681C09E19800CCFAD9 /* taiyuan.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = taiyuan.gpx; path = ../taiyuan.gpx; sourceTree = "<group>"; };
 		3E7F481B1BEF36AC00668B5E /* LazyWeekend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyWeekend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7F481F1BEF36AC00668B5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3E7F48211BEF36AC00668B5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		3E7F481E1BEF36AC00668B5E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3E5D80681C09E19800CCFAD9 /* taiyuan.gpx */,
 				3E7F482A1BEF36AC00668B5E /* Assets.xcassets */,
 				3E7F482F1BEF36AC00668B5E /* Info.plist */,
 				3E7F48211BEF36AC00668B5E /* AppDelegate.h */,
@@ -384,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5D80691C09E19900CCFAD9 /* taiyuan.gpx in Resources */,
 				3E7F482B1BEF36AC00668B5E /* Assets.xcassets in Resources */,
 				3E7F48291BEF36AC00668B5E /* Main.storyboard in Resources */,
 			);
