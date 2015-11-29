@@ -59,10 +59,36 @@ install_resource()
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/UMSocialSDKResourcesNew.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WeiboSDK.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSCommentDetailController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSCommentInputController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSCommentInputControlleriPad.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMShareEditViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMShareEditViewControlleriPad.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSLoginViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSnsAccountViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSShareListController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/en.lproj"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/zh-Hans.lproj"
   install_resource "WeiboSDK/libWeiboSDK/WeiboSDK.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/UMSocialSDKResourcesNew.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WeiboSDK.bundle"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSCommentDetailController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSCommentInputController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSCommentInputControlleriPad.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMShareEditViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMShareEditViewControlleriPad.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSLoginViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSnsAccountViewController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/SocialSDKXib/UMSShareListController.xib"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/en.lproj"
+  install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.3/UMSocial_Sdk_4.3/zh-Hans.lproj"
   install_resource "WeiboSDK/libWeiboSDK/WeiboSDK.bundle"
 fi
 

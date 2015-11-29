@@ -9,11 +9,14 @@
 #import "LZLunchViewController.h"
 #import "CWDAutoScrollView.h"
 #import "LZLoginData.h"
+#import <UMSocial.h>
 
 #define kSettingInfoSegue @"ToSettingInfo"
 #define kToMainVC @"ToMainVC"
 
-@interface LZLunchViewController (){
+
+
+@interface LZLunchViewController ()<UMSocialUIDelegate>{
     NSArray *_dataArray;
 }
 @property (weak, nonatomic) IBOutlet UIButton *wbLoginBtn;
@@ -57,8 +60,10 @@
     if (sender.tag == 10) {
         //进行微博登录
         NSLog(@"sinalogin");
+        [self weiboSSOLogin];
     }else if (sender.tag == 11){
         //进行微信登录
+        [self umengShareSocial];
         NSLog(@"weChatlogin");
     }else{
         return;
@@ -93,6 +98,31 @@
 }
 
 
+//进行微博授权登录(官方)
+- (void)weiboSSOLogin{
+    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+    request.redirectURI = kRedirectURL;
+    request.scope = @"all";
+    request.userInfo = @{@"name":@"lunarboat", @"age":@"22"};
+    [WeiboSDK sendRequest:request];
+}
+
+//友盟SSO第三方登录
+//- (void)weiboSSOLogin{
+//    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
+//    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService], YES, ^(UMSocialResponseEntity * response){
+//        if (response.responseCode == UMSResponseCodeSuccess) {
+//            
+//            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:UMShareToSina];
+//            
+//            NSLog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
+//        }});
+//}
+
+//练习分享
+- (void)umengShareSocial{
+    [UMSocialSnsService presentSnsIconSheetView:self appKey:kUmengAppkey shareText:@"测试分享" shareImage:nil shareToSnsNames:@[UMShareToSina, UMShareToTencent, UMShareToWechatTimeline, UMShareToQQ, UMShareToQzone, UMShareToWechatSession, UMShareToSms] delegate:self];
+}
 
 #pragma mark - Navigation
 
@@ -104,5 +134,9 @@
     }
 }
 
+#pragma mark - 分享
+-(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response{
+    NSLog(@"分享完成");
+}
 
 @end

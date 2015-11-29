@@ -9,6 +9,7 @@
 #import "LZMainViewController.h"
 #import "LZMainData.h"
 #import "LZMainCell.h"
+#import "LZLoginData.h"
 #import <UIImageView+WebCache.h>
 
 #define MainCellID @"MainCell"
@@ -24,7 +25,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",self.dataArray);
+//    NSLog(@"%@",self.dataArray);
+    if (!self.dataArray) {
+        NSDictionary *parameters = @{@"session_id":GETSESSIONID, @"v":@"3", @"page":@"1", @"lon":GETLON, @"lat":GETLAT};
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            //这里应该加个hud延时加载，完成网络请求跳转后消失
+            [LZLoginData getMainDataWithParameters:parameters complationBlock:^(NSArray *resultArray) {
+                _dataArray = resultArray;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [_tableView reloadData];
+                });
+            }];
+        });
+    }
 }
 
 

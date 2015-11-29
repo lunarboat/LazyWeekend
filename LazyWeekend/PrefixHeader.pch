@@ -16,4 +16,7 @@
 #define GETLAT [[NSUserDefaults standardUserDefaults] valueForKey:@"lat"]
 #define GETLON [[NSUserDefaults standardUserDefaults] valueForKey:@"lon"]
 
+#define kUmengAppkey @"565ab0dc67e58ebabf0046d5"
+#define kRedirectURL @"https://api.weibo.com/oauth2/default.html"
+
 #endif /* PrefixHeader_pch */

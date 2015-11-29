@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WeiboSDK.h>
 
 @interface LZLunchViewController : UIViewController
 
